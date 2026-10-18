@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="yuyuko.jpg">
+    <title>Zixxy's Portfolio ♥</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="swirl swirl-left"></div>
+    <div class="swirl swirl-right"></div>
+
+    <canvas id="bg-canvas"></canvas>
+    <div class="container">
+
+    <div class="container">
+        <section class="hero">
+            <div class="avatar-square">
+                <img src="yuyuko.jpg" alt="Avatar" loading="lazy">
+            </div>
+            <div>
+                <h1>Zixxy</h1>
+                <p>A slug vaguely reminiscent of a self taught gamedev student training to be an engineer</p>
+                
+                <div class="contacts">
+                    <div class="contact-wrapper">
+                        <a href="mailto:bzixxy@gmail.com" class="btn-primary">Mail</a>
+                        <div class="dropdown-info">
+                            <span>Email</span> bzixxy@gmail.com
+                        </div>
+                    </div>
+
+                    <div class="contact-wrapper">
+                        <a href="https://discord.com/users/1061401847581130802" target="_blank" class="btn-secondary">Discord</a>
+                        <div class="dropdown-info">
+                            <span>User ID</span> kohiibaka
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-prompt">
+                <span class="gradient-text">What I can do</span>
+                <span class="arrow">↓</span>
+            </div>
+        </section>
+
+        <section class="portfolio-hub">
+            
+            <!-- РЯД 1 -->
+            <div class="gear-hub-group">
+                <h2 class="row-title">Models that i made before</h2>
+                <div class="gear-row">
+                    <div class="gear-wrapper">
+                        <div class="gear-container">
+                            <button class="gear-btn" onclick="toggleGallery('gal1_1', this)"><span>⬡</span></button>
+                        </div>
+                        <div class="dropdown-info">
+                            <span>Meshes</span> Just Pictures
+                        </div>
+                    </div>
+                    <div class="gear-wrapper">
+                        <div class="gear-container">
+                            <button class="gear-btn" onclick="toggleGallery('gal1_2', this)"><span>⬡</span></button>
+                        </div>
+                        <div class="dropdown-info">
+                            <span>Preview</span> I tried myself in preview creating for YouTube or smth.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gal1_1" class="gif-gallery">
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="ящик.png" alt="Box with green fluid" loading="lazy">
+                    </div>
+                    <h4>Box with green fluid</h4>
+                    <p>Mesh what i was maded in 30 minutes for my game.</p>
+                </div>
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="Char.png" alt="Headless character model" loading="lazy">
+                    </div>
+                    <h4>Headless character model</h4>
+                    <p>Char for my dropped game. So this is my first big model i made it in 7 days. Now i can do it in 2 hours.</p>
+                </div>
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="Wireframe.jpg" alt="Hammer Wireframe" loading="lazy">
+                    </div>
+                    <h4>Hammer Wireframe</h4>
+                    <p>Much amount of guys ask me to show them wireframe of my models, so there it is.</p>
+                </div>
+            </div>
+
+            <div id="gal1_2" class="gif-gallery">
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="previev.png" alt="Preview" loading="lazy">
+                    </div>
+                    <h4>Preview</h4>
+                    <p>Maded with my old model for... Nothing i made it just for self to know how to do this.</p>
+                </div>
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="Preview.png" alt="Hammer review" loading="lazy">
+                    </div>
+                    <h4>Hammer review</h4>
+                    <p>The second one useless preview with new mesh. I made that hammer in two days.</p>
+                </div>
+            </div>
+
+            <!-- РЯД 2 -->
+            <div class="gear-hub-group">
+                <h2 class="row-title">Cool things from my own games</h2>
+                <div class="gear-row">
+
+                    <div class="gear-wrapper">
+                        <div class="gear-container">
+                            <button class="gear-btn" onclick="toggleGallery('gal2_1', this)"><span>⬡</span></button>
+                        </div>
+                        <div class="dropdown-info">
+                            <span>Thing 1</span> Thing 1
+                        </div>
+                    </div>
+
+                    <div class="gear-wrapper">
+                        <div class="gear-container">
+                            <button class="gear-btn" onclick="toggleGallery('gal2_2', this)"><span>⬡</span></button>
+                        </div>
+                        <div class="dropdown-info">
+                            <span>Thing 2</span> Smooth movement camera
+                        </div>
+                    </div>
+
+                    <div class="gear-wrapper">
+                        <div class="gear-container">
+                            <button class="gear-btn" onclick="toggleGallery('gal2_3', this)"><span>⬡</span></button>
+                        </div>
+                        <div class="dropdown-info">
+                            <span>Thing 2</span> Enemy mechanics + death
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="gal2_1" class="gif-gallery">
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="previev.png" alt="Raspberry Pi 5" loading="lazy">
+                    </div>
+                    <h4>Raspberry Pi 5 + NPU</h4>
+                    <p>Детекция объектов в реальном времени.</p>
+                </div>
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="yuyuko.jpg" alt="Raspberry Pi 5" loading="lazy">
+                    </div>
+                    <h4>Raspberry Pi 5 + NPU</h4>
+                    <p>Дополнительный ракурс проекта.</p>
+                </div>
+            </div>
+
+            <div id="gal2_2" class="gif-gallery">
+
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="previev.png" alt="Placeholder 1" loading="lazy">
+                    </div>
+                    <h4>Placeholder Project 1</h4>
+                    <p>Описание второго проекта по железу.</p>
+                </div>
+
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="yuyuko.jpg" alt="Placeholder 2" loading="lazy">
+                    </div>
+                    <h4>Placeholder Project 2</h4>
+                    <p>Дополнительные материалы.</p>
+                </div>
+                </div>
+
+            <div id="gal2_3" class="gif-gallery">
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="yuyuko.jpg" alt="Placeholder 3" loading="lazy">
+                    </div>
+                    <h4>Placeholder Project 2</h4>
+                    <p>Дополнительные материалы.</p>
+                </div>
+
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="yuyuko.jpg" alt="Placeholder 3" loading="lazy">
+                    </div>
+                    <h4>Placeholder Project 2</h4>
+                    <p>Дополнительные материалы.</p>
+                </div>
+                </div>
+
+            <!-- РЯД 3 -->
+            <div class="gear-hub-group">
+                <h2 class="row-title">systemd slop</h2>
+                <div class="gear-row">
+                    <div class="gear-wrapper">
+                        <div class="gear-container">
+                            <button class="gear-btn" onclick="toggleGallery('gal3_1', this)"><span>⬡</span></button>
+                        </div>
+                        <div class="dropdown-info">
+                            <span>slop 1</span> Current Os
+                        </div>
+                    </div>
+                    <div class="gear-wrapper">
+                        <div class="gear-container">
+                            <button class="gear-btn" onclick="toggleGallery('gal3_2', this)"><span>⬡</span></button>
+                        </div>
+                        <div class="dropdown-info">
+                            <span>NixOs</span> Hardest think i ever made in unix based systems
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="gal3_1" class="gif-gallery">
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="fastfetch.png" alt="Arch Linux" loading="lazy">
+                    </div>
+                    <h4>Arch Linux</h4>
+                    <p>Arch linux | oxwm | Vim</p>
+                </div>
+            </div>
+
+            <div id="gal3_2" class="gif-gallery">
+                <div class="gif-card">
+                    <div class="gif-placeholder">
+                        <img src="NixOs.png" alt="NixOs logo" loading="lazy">
+                    </div>
+                    <h4>NixOs</h4>
+                    <p>If you reading this, currently im not on this and keep thinking that is hard for me. But you have to understand i'll work on this anyway.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="socials-section">
+            <h2 class="stage-title" style="margin-bottom: 30px; font-size: 1.4rem; color: #38bdf8; text-align: center;">My social media</h2>
+            <div class="social-links">
+                <div class="contact-wrapper">
+                    <a href="https://github.com/Zixxyy" target="_blank" class="social-btn">GitHub</a>
+                    <div class="dropdown-info">
+                        <span>Username</span> Zixxyy
+                    </div>
+                </div>
+
+                <div class="contact-wrapper">
+                    <a href="https://t.me/ZixxyZz" target="_blank" class="social-btn">Telegram</a>
+                    <div class="dropdown-info">
+                        <span>Channel/Tag</span> @ZixxyZz
+                    </div>
+                </div>
+
+                <div class="contact-wrapper">
+                    <a href="https://www.youtube.com/@ZixxyYoo" target="_blank" class="social-btn">YouTube</a>
+                    <div class="dropdown-info">
+                        <span>Channel</span> @ZixxyYoo
+                    </div>
+                </div>
+
+                <div class="contact-wrapper">
+                    <a href="https://osu.ppy.sh/users/34562281" target="_blank" class="social-btn">Osu!</a>
+                    <div class="dropdown-info">
+                        <span>Profile</span> ZixxyZz
+                    </div>
+                </div>
+
+                <div class="contact-wrapper">
+                    <a href="https://www.twitch.tv/zixxy_yo" target="_blank" class="social-btn">Twitch</a>
+                    <div class="dropdown-info">
+                        <span>u/Username</span> Zixxy_yo
+                    </div>
+                </div>
+            </div>
+            
+            <div class="afterword-box">
+                <h3 class="afterword-title">Here is what I can do:</h3>
+                <ol class="skills-list">
+                    <li>C# + Unity 2D/3D: Intermediate level.</li>
+                    <li>C++ + Arduino: Basic level.</li>
+                    <li>Git / GitHub: Setting up repositories, commits and no more</li>
+                    <li>2D Art: Drawing in Krita and Aseprite.</li>
+                    <li>CAD Drafting: Fusion 360 and manual paper drafting (intermediate level).</li>
+                    <li>3D Modeling & Animation: Low-poly models in Blender and 3D animations using existing rigs.</li>
+                    <li>Android Development: Building apps and games using pure C# + Avalonia.</li>
+                    <li>Unix based systems, currently im on Arch-based system with oxwm.
+                    <li>Using vim, so increase my type speed that maxing my productivity.</li>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="afterword-box">
+                <h3>Afterwords</h3>
+                <p>
+                I am not an expert or a professional in any single field, but I can accomplish what I need at the exact level required for my projects.
+                I am involved in Game Development and plan to keep growing in this area. Alongside that, I am studying Embedded Engineering and plan to move to the US to continue my education.
+                The entire codebase of this website was written by AI, while all the design, images, content, and styles were created manually by me. I don't know HTML + CSS, though I have a basic understanding of JS.
+                I also use AI quite frequently in my projects, but thanks to my experience, I always double-check its output. In case of any bugs, I can fix them on my own or optimize the generated code by shortening it.
+                </p>
+            </div>
+            <div class="afterword-box">I am always happy if someone reaches out to me with a job offer or a paid project proposal. You can contact me via Gmail or Discord.</div>
+        </section>
+    </div>
+    
+    <footer class="site-footer">
+        © 2024–2026 Zixxy. All rights reserved.
+    </footer>
+
+    <!-- Modal Window -->
+    <div class="modal-overlay" id="imageModal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <img class="modal-img" id="modalImg" src="" alt="Zoomed view">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
