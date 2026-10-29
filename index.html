@@ -1,332 +1,168 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="yuyuko.jpg">
-    <title>Zixxy's Portfolio ♥</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zixxy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="swirl swirl-left"></div>
-    <div class="swirl swirl-right"></div>
+<div class="page">
+  <div class="swirl swirl-left"></div>
+  <div class="swirl swirl-right"></div>
 
-    <canvas id="bg-canvas"></canvas>
-    <div class="container">
+  <main class="wrap">
+    <!-- HERO. Copy nothing here unless you change name / avatar / links. -->
+    <header class="hero">
+      <div class="avatar">
+        <img src="Pictures/yuyuko.jpg" alt="Zixxy">
+      </div>
+      <h1>Zixxy</h1>
+      <p class="tag">Fumo engineering</p>
+      <div class="row">
+        <a class="link" href="mailto:bzixxy@gmail.com">Mail</a>
+        <a class="link cyan" href="https://discord.com/users/1061401847581130802" target="_blank" rel="noreferrer">Discord</a>
+      </div>
+    </header>
 
-    <div class="container">
-        <section class="hero">
-            <div class="avatar-square">
-                <img src="Pictures/yuyuko.jpg" alt="Avatar" loading="lazy">
-            </div>
-            <div>
-                <h1>Zixxy</h1>
-                <p>Fumo Engineering, Yuyuko Programming Development</p>
-                
-                <div class="contacts">
-                    <div class="contact-wrapper">
-                        <a href="mailto:bzixxy@gmail.com" class="btn-primary">Mail</a>
-                        <div class="dropdown-info">
-                            <span>Email</span> bzixxy@gmail.com
-                        </div>
-                    </div>
+    <!-- ABOUT. Frame: frame-about (pink bar on the left). -->
+    <section class="block">
+      <h2>About me</h2>
+      <div class="frame-about">
+        <p>My name is Denys, everyone call's me Zixxy. I write code for microcontrollers and other cool systems—like clocks, speakers, little screens, and so on. But if it were up to me, I’d program my own fusion reactor; unfortunately, I’m not rich. 
+            I dream of attending college in the U.S. to study *Embedded Engineering* and then, in my wildest dreams, starting my own company. Right now, at home, I mostly entertain myself as best I can by creating various terminal utilities for Linux and so on. 
+            I just enjoy programming more than gaming, and seeing a character start to walk or a button get pressed is way more satisfying than getting a kill in some game. So I probably haven't played anything for about two months now. </p>
+      </div>
+    </section>
 
-                    <div class="contact-wrapper">
-                        <a href="https://discord.com/users/1061401847581130802" target="_blank" class="btn-secondary">Discord</a>
-                        <div class="dropdown-info">
-                            <span>User ID</span> kohiibaka
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- PICTURE. Copy the whole <button class="shot">...</button> to add another image.
+         Put the file in Pictures/ and change src, h3, and the <p class="more">. -->
+    <section class="block">
+      <h2>Pictures</h2>
+      <div class="grid">
+        <button class="shot" type="button">
+          <img src="Pictures/ящик.png" alt="Box with green fluid">
+          <div class="meta">
+            <h3>Box with green fluid</h3>
+            <p class="hint">click for more</p>
+            <p class="more">This is my first model where i make UV unvrap and paint it. Also this is my one of the last models because now i switched to programming instead of everything at the same time</p>
+          </div>
+        </button>
 
-            <div class="scroll-prompt">
-                <span class="gradient-text">What I can do</span>
-                <span class="arrow">↓</span>
-            </div>
-        </section>
+        <button class="shot" type="button">
+          <img src="Pictures/Char.png" alt="Headless character">
+          <div class="meta">
+            <h3>Headless character</h3>
+            <p class="hint">click for more</p>
+            <p class="more">First big model for a dropped game. Took a week then. Now i can do it in two hours, but ill not do this i tired of blender and 3d models. At the very least, without any motivation, I don't want to do this anymore.</p>
+          </div>
+        </button>
 
-        <section class="portfolio-hub">
-            
-            <!-- РЯД 1 -->
-            <div class="gear-hub-group">
-                <h2 class="row-title">Models that i made before</h2>
-                <div class="gear-row">
-                    <div class="gear-wrapper">
-                        <div class="gear-container">
-                            <button class="gear-btn" onclick="toggleGallery('gal1_1', this)"><span>⬡</span></button>
-                        </div>
-                        <div class="dropdown-info">
-                            <span>Meshes</span> Just Pictures
-                        </div>
-                    </div>
-                    <div class="gear-wrapper">
-                        <div class="gear-container">
-                            <button class="gear-btn" onclick="toggleGallery('gal1_2', this)"><span>⬡</span></button>
-                        </div>
-                        <div class="dropdown-info">
-                            <span>Preview</span> I tried myself in preview creating for YouTube or smth.
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <button class="shot" type="button">
+          <img src="Pictures/Wireframe.jpg" alt="Hammer wireframe">
+          <div class="meta">
+            <h3>Hammer wireframe</h3>
+            <p class="hint">click for more</p>
+            <p class="more">People kept asking for the wireframe, so here it is.</p>
+          </div>
+        </button>
 
-            <div id="gal1_1" class="gif-gallery">
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Pictures/ящик.png" alt="Box with green fluid" loading="lazy">
-                    </div>
-                    <h4>Box with green fluid</h4>
-                    <p>Mesh what i was maded in 30 minutes for my game.</p>
-                </div>
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Pictures/Char.png" alt="Headless character model" loading="lazy">
-                    </div>
-                    <h4>Headless character model</h4>
-                    <p>Char for my dropped game. So this is my first big model i made it in 7 days. Now i can do it in 2 hours.</p>
-                </div>
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Pictures/Wireframe.jpg" alt="Hammer Wireframe" loading="lazy">
-                    </div>
-                    <h4>Hammer Wireframe</h4>
-                    <p>Much amount of guys ask me to show them wireframe of my models, so there it is.</p>
-                </div>
-            </div>
+        <button class="shot" type="button">
+          <img src="Pictures/previev.png" alt="Preview">
+          <div class="meta">
+            <h3>Preview</h3>
+            <p class="hint">click for more</p>
+            <p class="more">An old model, made just to learn how a preview is put together.</p>
+          </div>
+        </button>
 
-            <div id="gal1_2" class="gif-gallery">
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Pictures/previev.png" alt="Preview" loading="lazy">
-                    </div>
-                    <h4>Preview</h4>
-                    <p>Maded with my old model for... Nothing i made it just for self to know how to do this.</p>
-                </div>
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Pictures/Preview.png" alt="Hammer review" loading="lazy">
-                    </div>
-                    <h4>Hammer review</h4>
-                    <p>The second one useless preview with new mesh. I made that hammer in two days.</p>
-                </div>
-            </div>
+        <button class="shot" type="button">
+          <img src="Pictures/Preview.png" alt="Hammer review">
+          <div class="meta">
+            <h3>Hammer review</h3>
+            <p class="hint">click for more</p>
+            <p class="more">Second preview, this hammer is my best model i think also its my last model and yes, when you do something what you like to its cool, this model is one of this.</p>
+          </div>
+        </button>
 
-            <!-- РЯД 2 -->
-            <!-- <div class="gear-hub-group">
-                <h2 class="row-title">Placeholder</h2>
-                <div class="gear-row">
+        <button class="shot" type="button">
+          <img src="Pictures/fastfetch.png" alt="Arch Linux">
+          <div class="meta">
+            <h3>Arch Linux</h3>
+            <p class="hint">click for more</p>
+            <p class="more">This is my old Fastfetch with arch, now i using cachyos, oxwm,.</p>
+          </div>
+        </button>
 
-                    <div class="gear-wrapper">
-                        <div class="gear-container">
-                            <button class="gear-btn" onclick="toggleGallery('gal2_1', this)"><span>⬡</span></button>
-                        </div>
-                        <div class="dropdown-info">
-                            <span>Placeholder</span> Placeholder
-                        </div>
-                    </div>
+        <button class="shot" type="button">
+          <img src="Pictures/NixOs.png" alt="NixOS">
+          <div class="meta">
+            <h3>NixOS</h3>
+            <p class="hint">click for more</p>
+            <p class="more">Not daily-driving it right now. Still the hardest unix thing I have tried, and I will come back to it.</p>
+          </div>
+        </button>
+      </div>
+    </section>
 
-                    <div class="gear-wrapper">
-                        <div class="gear-container">
-                            <button class="gear-btn" onclick="toggleGallery('gal2_2', this)"><span>⬡</span></button>
-                        </div>
-                        <div class="dropdown-info">
-                            <span>Placeholder</span> Placeholder
-                        </div>
-                    </div>
+    <!-- SKILL. Copy one <li> to add a skill. Frame: frame-skills (dashed cyan). -->
+    <section class="block">
+      <h2>What I can do</h2>
+      <div class="frame-skills">
+        <ul>
+          <li><span>C</span>Advanced level, i can make embedded systems, terminal utilyties and more.</li>
+          <li><span>NeoVim/Vim</span>Im using NeoVim to increase my type speed.</li>
+          <li><span>C++</span>Basic, terminal utilities, im using this when i dont want to use C. basically almost never.</li>
+          <li><span>C# / Unity</span>2D and 3D, intermediate</li>
+          <li><span>Unix based systems</span>I can do everything, from servers to my own desktop enviroment, just give me time and motivation.</li>
+          <li><span>Artist skills</span>Krita and Aseprite</li>
+          <li><span>CAD</span>I can make basic models for 3d printer.</li>
+          <li><span>Git</span>Repos and commits, nothing fancy</li>
+          <li><span>Blender</span>Low-poly models and animation on existing rigs</li>
+          <li><span>English</span>IELTS 6.5, can easily speak with others.</li>
+        </ul>
+      </div>
+    </section>
 
-                    <div class="gear-wrapper">
-                        <div class="gear-container">
-                            <button class="gear-btn" onclick="toggleGallery('gal2_3', this)"><span>⬡</span></button>
-                        </div>
-                        <div class="dropdown-info">
-                            <span>Placeholder</span> Placeholder
-                        </div>
-                    </div>
+    <!-- AFTERWORD. Frame: frame-note (pink outline, filled). -->
+    <section class="block">
+      <h2>Afterword</h2>
+      <div class="frame-note">
+        <p>I don't use AI and always write code by hand—unless I'm unfamiliar with a particular technology.
+        For example, I built this website using Grok because I don't know how to code in JavaScript, HTML, or CSS.
+        I'm trying to move toward embedded systems because I enjoy that field, and knowing myself, I think I can succeed in it. 
+        My primary language is C and i love it so much.
+        I have a superpower! I pick up new technologies easily,
+        for example: I switched to Linux in literally a week and have already gotten the hang of it completely.
+        Overall, I like what I do, and I'll keep doing it even if I can't find a job or achieve success.</p>
+      </div>
+    </section>
 
-                </div>
-            </div>
+    <!-- HIRE. Frame: frame-hire (cyan line on top). -->
+    <section class="block">
+      <h2>Work</h2>
+      <div class="frame-hire">
+        <p>I'd be very happy to hear about any job opportunities, so my Discord and email are always open to potential employers.</p>
+      </div>
+    </section>
 
-            <div id="gal2_1" class="gif-gallery">
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Placeholder" alt="Placeholder" loading="lazy">
-                    </div>
-                    <h4>Placeholder</h4>
-                    <p>Placeholder.</p>
-                </div>
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Placeholder" alt="Placeholder" loading="lazy">
-                    </div>
-                    <h4>Placeholder</h4>
-                    <p>Placeholder</p>
-                </div>
-            </div>
+    <section class="block">
+      <h2>Elsewhere</h2>
+      <div class="socials">
+        <a href="https://github.com/Zixxyy" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://t.me/ZixxyZz" target="_blank" rel="noreferrer">Telegram</a>
+        <a href="https://www.youtube.com/@ZixxyYoo" target="_blank" rel="noreferrer">YouTube</a>
+        <a href="https://osu.ppy.sh/users/34562281" target="_blank" rel="noreferrer">Osu!</a>
+        <a href="https://www.twitch.tv/zixxy_yo" target="_blank" rel="noreferrer">Twitch</a>
+      </div>
+    </section>
 
-            <div id="gal2_2" class="gif-gallery">
-
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Placeholder" alt="Placeholder 1" loading="lazy">
-                    </div>
-                    <h4>Placeholder Project 1</h4>
-                    <p>Placeholder.</p>
-                </div>
-
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Placeholder" alt="Placeholder 2" loading="lazy">
-                    </div>
-                    <h4>Placeholder Project 2</h4>
-                    <p>Placeholder.</p>
-                </div>
-                </div>
-
-            <div id="gal2_3" class="gif-gallery">
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Placeholder" alt="Placeholder 3" loading="lazy">
-                    </div>
-                    <h4>Placeholder Project 2</h4>
-                    <p>Placeholder.</p>
-                </div>
-
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Placeholder" alt="Placeholder 3" loading="lazy">
-                    </div>
-                    <h4>Placeholder Project 2</h4>
-                    <p>Placeholder.</p>
-                </div>
-                </div> -->
-
-            <!-- РЯД 3 -->
-            <div class="gear-hub-group">
-                <h2 class="row-title">systemd slop</h2>
-                <div class="gear-row">
-                    <div class="gear-wrapper">
-                        <div class="gear-container">
-                            <button class="gear-btn" onclick="toggleGallery('gal3_1', this)"><span>⬡</span></button>
-                        </div>
-                        <div class="dropdown-info">
-                            <span>slop 1</span> Current Os
-                        </div>
-                    </div>
-                    <div class="gear-wrapper">
-                        <div class="gear-container">
-                            <button class="gear-btn" onclick="toggleGallery('gal3_2', this)"><span>⬡</span></button>
-                        </div>
-                        <div class="dropdown-info">
-                            <span>NixOs</span> Hardest think i ever made in unix based systems
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="gal3_1" class="gif-gallery">
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Pictures/fastfetch.png" alt="Arch Linux" loading="lazy">
-                    </div>
-                    <h4>Arch Linux</h4>
-                    <p>Arch linux | oxwm | Vim</p>
-                </div>
-            </div>
-
-            <div id="gal3_2" class="gif-gallery">
-                <div class="gif-card">
-                    <div class="gif-placeholder">
-                        <img src="Pictures/NixOs.png" alt="NixOs logo" loading="lazy">
-                    </div>
-                    <h4>NixOs</h4>
-                    <p>If you reading this, currently im not on this and keep thinking that is hard for me. But you have to understand i'll work on this anyway.</p>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="socials-section">
-            <h2 class="stage-title" style="margin-bottom: 30px; font-size: 1.4rem; color: #38bdf8; text-align: center;">My social media</h2>
-            <div class="social-links">
-                <div class="contact-wrapper">
-                    <a href="https://github.com/Zixxyy" target="_blank" class="social-btn">GitHub</a>
-                    <div class="dropdown-info">
-                        <span>Username</span> Zixxyy
-                    </div>
-                </div>
-
-                <div class="contact-wrapper">
-                    <a href="https://t.me/ZixxyZz" target="_blank" class="social-btn">Telegram</a>
-                    <div class="dropdown-info">
-                        <span>Channel/Tag</span> @ZixxyZz
-                    </div>
-                </div>
-
-                <div class="contact-wrapper">
-                    <a href="https://www.youtube.com/@ZixxyYoo" target="_blank" class="social-btn">YouTube</a>
-                    <div class="dropdown-info">
-                        <span>Channel</span> @ZixxyYoo
-                    </div>
-                </div>
-
-                <div class="contact-wrapper">
-                    <a href="https://osu.ppy.sh/users/34562281" target="_blank" class="social-btn">Osu!</a>
-                    <div class="dropdown-info">
-                        <span>Profile</span> ZixxyZz
-                    </div>
-                </div>
-
-                <div class="contact-wrapper">
-                    <a href="https://www.twitch.tv/zixxy_yo" target="_blank" class="social-btn">Twitch</a>
-                    <div class="dropdown-info">
-                        <span>u/Username</span> Zixxy_yo
-                    </div>
-                </div>
-            </div>
-            
-            <div class="afterword-box">
-                <h3 class="afterword-title">Here is what I can do:</h3>
-                <ol class="skills-list">
-                    <li>C# + Unity 2D/3D: Intermediate level.</li>
-                    <li>C++ + Arduino: Basic level.</li>
-                    <li>Git / GitHub: Setting up repositories, commits and no more</li>
-                    <li>2D Art: Drawing in Krita and Aseprite.</li>
-                    <li>CAD Drafting: Fusion 360 and manual paper drafting (intermediate level).</li>
-                    <li>3D Modeling & Animation: Low-poly models in Blender and 3D animations using existing rigs.</li>
-                    <li>Android Development: Building apps and games using pure C# + Avalonia.</li>
-                    <li>Unix based systems, currently im on Arch-based system with oxwm.
-                    <li>Using vim, so increase my type speed that maxing my productivity.</li>
-                    </li>
-                </ol>
-            </div>
-
-            <div class="afterword-box">
-                <h3>Afterwords</h3>
-                <p>
-                I am not an expert or a professional in any single field, but I can accomplish what I need at the exact level required for my projects.
-                I am involved in Game Development and plan to keep growing in this area. Alongside that, I am studying Embedded Engineering and plan to move to the US to continue my education.
-                The entire codebase of this website was written by AI, while all the design, images, content, and styles were created manually by me. I don't know HTML + CSS, though I have a basic understanding of JS.
-                I also use AI quite frequently in my projects, but thanks to my experience, I always double-check its output. In case of any bugs, I can fix them on my own or optimize the generated code by shortening it.
-                </p>
-            </div>
-            <div class="afterword-box">I am always happy if someone reaches out to me with a job offer or a paid project proposal. You can contact me via Gmail or Discord.</div>
-        </section>
-    </div>
-    
-    <footer class="site-footer">
-        © 2024–2026 Zixxy. All rights reserved.
-    </footer>
-
-    <!-- Modal Window -->
-    <div class="modal-overlay" id="imageModal">
-        <div class="modal-content">
-            <button class="modal-close" id="modalClose">&times;</button>
-            <img class="modal-img" id="modalImg" src="" alt="Zoomed view">
-            <div class="modal-caption" id="modalCaption"></div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <footer class="foot">© 2024–2026 Zixxy</footer>
+  </main>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
